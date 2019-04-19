@@ -4,7 +4,9 @@
 <head>
 <title>Survey</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="col-md-8 offset-md-2 bg-light py-3">
@@ -18,12 +20,12 @@
             </div>
             <div class="form-group">
                 <label for="photo">Link to Photo Image (Required)</label>
-                <input type="text" class="form-control" id="photo" placeholder="Name" required>
+                <input type="text" class="form-control" id="photo" placeholder="Photo" required>
             </div>
             <hr>
             <div class="form-group" class="form-inline">
                 <h4>Question 1</h4>
-                <label for="q1">question1goeshere</label>
+                <label for="q1">Your mind is always buzzing with unexplored ideas and plans.</label>
                 <select class="form-control" id="q1" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -35,7 +37,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 2</h4>
-                <label for="q2">question2goeshere</label>
+                <label for="q2">Generally speaking, you rely more on your experience than your imagination.</label>
                 <select class="form-control" id="q2" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -47,7 +49,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 3</h4>
-                <label for="q3">question3goeshere</label>
+                <label for="q3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
                 <select class="form-control" id="q3" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -59,7 +61,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 4</h4>
-                <label for="q4">question4goeshere</label>
+                <label for="q4">You rarely do something just out of sheer curiosity.</label>
                 <select class="form-control" id="q4" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -71,7 +73,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 5</h4>
-                <label for="q5">question5goeshere</label>
+                <label for="q5">People can rarely upset you.</label>
                 <select class="form-control" id="q5" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -83,7 +85,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 6</h4>
-                <label for="q6">question6goeshere</label>
+                <label for="q6">It is often difficult for you to relate to other people’s feelings.</label>
                 <select class="form-control" id="q6" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -95,7 +97,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 7</h4>
-                <label for="q7">question7goeshere</label>
+                <label for="q7">In a discussion, truth should be more important than people’s sensitivities.</label>
                 <select class="form-control" id="q7" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -107,7 +109,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 8</h4>
-                <label for="q8">question8goeshere</label>
+                <label for="q8">You rarely get carried away by fantasies and ideas.</label>
                 <select class="form-control" id="q8" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -119,7 +121,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 9</h4>
-                <label for="q9">question9goeshere</label>
+                <label for="q9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
                 <select class="form-control" id="q9" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -131,7 +133,7 @@
             </div>
             <div class="form-group" class="form-inline">
                 <h4>Question 10</h4>
-                <label for="q10">question10goeshere</label>
+                <label for="q10">You feel more energetic after spending time with a group of people.</label>
                 <select class="form-control" id="q10" required>
                     <option value="" selected disabled>Select an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -145,6 +147,27 @@
       </form>
     </div>
 
+    <div id="results-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title text-center"><strong>Best Match</strong></h2>
+                  <button type="button" class="close scroll" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <h5 id="match-name"></h5>
+                  <img class="img-fluid" id="match-img" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default scroll" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+    
 </body>
 <script>
         $('#form').submit(function(e) {
@@ -166,8 +189,16 @@
                 photo:$("#photo").val(),
                 scores:scores
             };
-            console.log(friendData);
+            
+            $.post("/api/friends", friendData, function(data){
+                $("#match-name").text(data.name)
+                $("#match-img").attr("src", data.photo);
+                $("#results-modal").modal("toggle");
+
+            })
+
         });
+
 
 </script>
 </html>
